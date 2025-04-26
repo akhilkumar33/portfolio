@@ -1,0 +1,431 @@
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #fff;
+  color: #333;
+}
+.profile-pic {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  margin-top: 10px;
+  object-fit: cover;
+  border: 4px solid #007bff;
+}
+
+nav {
+  background: #007bff;
+  padding: 10px;
+  text-align: center;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  margin: 0 15px;
+  font-weight: bold;
+}
+
+header {
+  padding: 50px;
+  text-align: center;
+}
+
+section {
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.skills-grid, .projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 20px;
+  justify-items: center;
+  margin-top: 20px;
+}
+
+.skill-item {
+  font-size: 30px;
+}
+
+.project {
+  margin-top: 20px;
+}
+
+footer {
+  background: #007bff;
+  padding: 10px;
+  text-align: center;
+  color: white;
+}
+
+.theme-toggle {
+  text-align: center;
+  margin: 20px;
+}
+
+.theme-toggle label {
+  cursor: pointer;
+  font-size: 1.2rem;
+}
+
+/* Dark Mode */
+body.dark-mode {
+  background: #121212;
+  color: #e0e0e0;
+}
+
+nav a {
+  color: inherit;
+}
+
+.project a {
+  color: #007bff;
+}
+
+body.dark-mode .resume-btn {
+  background-color: #0d6efd;
+}
+
+.resume-btn {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.resume-btn:hover {
+  background-color: #0056b3;
+}
+#about {
+  background-color: #f9f9f9;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+#about h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #007bff;
+  animation: fadeIn 1s ease-in-out;
+}
+
+/* About Me Text Animation */
+#about-me-text {
+  font-size: 1.2rem;
+  color: #333;
+  line-height: 1.8;
+  margin-bottom: 20px;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 1s ease-out forwards;
+}
+
+#about-me-text:nth-child(1) {
+  animation-delay: 0.5s;
+}
+
+#about-me-text:nth-child(2) {
+  animation-delay: 1s;
+}
+
+#about-me-text:nth-child(3) {
+  animation-delay: 1.5s;
+}
+
+/* Resume Button */
+.resume-btn {
+  background-color: #007bff;
+  color: white;
+  padding: 12px 30px;
+  border-radius: 30px;
+  font-size: 1.1rem;
+  text-decoration: none;
+  transition: background-color 0.3s;
+  margin-top: 20px;
+}
+
+.resume-btn:hover {
+  background-color: #0056b3;
+}
+
+/* Fade In & Slide Up Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+/* Projects Section Styling */
+#projects {
+  padding: 60px 20px;
+  text-align: center;
+  background-color: #f9f9f9;
+}
+
+#projects h2 {
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+  color: #007bff;
+  animation: fadeIn 1s ease-in-out;
+}
+
+/* Project Grid Layout */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Grid auto-fits columns */
+  gap: 30px;
+  justify-items: center;
+  margin-top: 30px;
+}
+
+/* Individual Project Card Styling */
+.project {
+  background: #fff;
+  padding: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  transition: transform 0.3s ease-in-out;
+  max-width: 320px;
+  text-align: left;
+  margin: 0 auto;
+}
+
+/* Project Title Styling */
+.project h3 {
+  font-size: 1.8rem;
+  color: #007bff;
+  margin-bottom: 15px;
+  animation: fadeInUp 1s ease-out forwards;
+}
+
+/* Project Description Styling */
+.project p {
+  font-size: 1.1rem;
+  color: #333;
+  line-height: 1.6;
+  margin-bottom: 15px;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 1s ease-out forwards;
+}
+
+/* Project Link Styling */
+.project a {
+  font-size: 1.1rem;
+  color: #007bff;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.project a:hover {
+  color: #0056b3;
+}
+
+/* Hover Effect for Project Cards */
+.project:hover {
+  transform: translateY(-5px); /* Lift effect on hover */
+}
+
+/* Fade In & Slide Up Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+/* Contact Section Styling */
+#contact {
+  padding: 60px 20px;
+  text-align: center;
+  background-color: #f9f9f9;
+}
+
+#contact h2 {
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+  color: #007bff;
+}
+
+/* Contact Icons Styling */
+.contact-icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px; /* Spacing between icons */
+  margin-top: 20px;
+}
+
+.contact-link {
+  font-size: 2rem;
+  color: #007bff;
+  transition: color 0.3s;
+}
+
+.contact-link:hover {
+  color: #0056b3;
+}
+
+.contact-link i {
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Icon Hover Effect */
+.contact-link:hover i {
+  transform: translateY(-5px); /* Lift effect on hover */
+}
+/* Project Section Styling */
+#projects {
+  padding: 60px 20px;
+  text-align: center;
+  background-color: #1f1f1f; /* Slightly lighter background for Projects */
+}
+
+#projects h2 {
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+  color: #007bff; /* Old Blue header */
+  animation: fadeIn 1s ease-in-out;
+}
+
+/* Project Grid Layout */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Grid auto-fits columns */
+  gap: 30px;
+  justify-items: center;
+  margin-top: 30px;
+}
+
+/* Individual Project Card Styling */
+.project {
+  background: #1f1f1f; /* Slightly lighter background for project cards */
+  padding: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  transition: transform 0.3s ease-in-out;
+  max-width: 320px;
+  text-align: left;
+  margin: 0 auto;
+}
+
+/* Project Title Styling */
+.project h3 {
+  font-size: 1.8rem;
+  color: #007bff; /* Old Blue project title */
+  margin-bottom: 15px;
+  animation: fadeInUp 1s ease-out forwards;
+}
+
+/* Project Description Styling */
+.project p {
+  font-size: 1.1rem;
+  color: #e0e0e0;  /* Light gray text */
+  line-height: 1.6;
+  margin-bottom: 15px;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 1s ease-out forwards;
+}
+
+/* Technologies Used Styling */
+.project .technologies {
+  display: flex;
+  justify-content: center;
+  gap: 15px; /* Spacing between icons */
+  margin-top: 15px;
+}
+
+.project .technologies i {
+  font-size: 1.4rem;
+  color: #007bff; /* Old Blue icons for technologies */
+  transition: transform 0.3s ease-in-out;
+}
+
+.project .technologies i:hover {
+  transform: translateY(-5px); /* Lift effect on hover */
+}
+
+/* Project Link Styling */
+.project a {
+  font-size: 1.1rem;
+  color: #007bff; /* Old Blue links */
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.project a:hover {
+  color: #0056b3; /* Darker blue on hover */
+}
+
+/* Hover Effect for Project Cards */
+.project:hover {
+  transform: translateY(-5px); /* Lift effect on hover */
+}
+
+/* Fade In & Slide Up Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
